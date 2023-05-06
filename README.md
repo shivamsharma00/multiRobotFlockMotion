@@ -1,7 +1,7 @@
 # Multi-Robot Simulator
 This repository contains MATLAB code for a multi-robot simulator.
 
-![](https://github.com/shivamsharma00/multiRobotFlockMotion/mrs_gif.gif)
+![Flocking Motion of Robots](https://github.com/shivamsharma00/multiRobotFlockMotion/mrs_gif.gif)
 
 ### Getting Started
 The gettingStarted function initializes the position, orientation, and speed of the robots randomly within a 100x100 world. The main function calls this function and then simulates the robot behavior for 100 iterations with a desired distance of 5 between each robot.
