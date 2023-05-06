@@ -1,0 +1,7 @@
+function animate(pos, world_size)
+    X1=[pos(1,:),pos(1,:)_;pos(2,:),pos(1,:)+cos(pos(3,:))];                                     %calculation of 3 coordinate systems for every thi, alpha, om, or2 and or3
+    Y1=[pos(2,:),pos(2,:);pos(2,:)+cos(pos(3,:)),pos(2,:)+sin(pos(3,:))];
+    plot(pos(1,:), pos(2,:), 'ro', X1,Y1,'-.black');
+    xlim([0 world_size])
+    ylim([0 world_size])
+end

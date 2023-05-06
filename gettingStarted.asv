@@ -1,0 +1,23 @@
+function [G, pos] = gettingStarted(numRobots)
+
+    init_pos = rand(4,numRobots);
+    init_pos(1,:) = init_pos(1,:)*10;
+    init_pos(2,:) = init_pos(2,:)*10;
+    init_pos(3,:) = init_pos(3,:)*2*pi;
+    init_pos(4,:) = init_pos(4,:)*1;
+    s = [];
+    t = [];
+    w = [];
+    n = {'robot1', 'robot2', 'robot3', 'robot4', 'robot5'};
+    for i = 1:numRobots
+        a = linspace(i,i,numRobots-i);
+        s = cat(2, s, a);
+        for j = i+1:numRobots
+            t = cat(2, t, j);
+            distance = sqrt((init_pos(1,j)-init_pos(1,i))^2+((init_pos(2,j)-init_pos(2,i))^2));
+            w = cat(2, w, distance);
+        end
+    end
+    G = graph(s,t,w,n);
+    pos = init_pos;
+end
